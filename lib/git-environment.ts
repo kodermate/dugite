@@ -7,7 +7,6 @@ function resolveEmbeddedGitDir(): string {
     process.platform === 'android' ||
     process.platform === 'win32'
   ) {
-    const s = path.sep
     return path
       .resolve(__dirname, '..', '..', 'git');
   }
