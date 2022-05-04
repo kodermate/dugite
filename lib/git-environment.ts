@@ -9,8 +9,7 @@ function resolveEmbeddedGitDir(): string {
   ) {
     const s = path.sep
     return path
-      .resolve(__dirname, '..', '..', 'git')
-      .replace(/[\\\/]app.asar[\\\/]/, `${s}app.asar.unpacked${s}`)
+      .resolve(__dirname, '..', '..', 'git');
   }
   throw new Error('Git not supported on platform: ' + process.platform)
 }
