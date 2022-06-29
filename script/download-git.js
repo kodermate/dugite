@@ -17,9 +17,6 @@ function extract(source, callback) {
       callback(error)
     })
     .on('end', function() {
-      console.log('OUTPUT PATH$$$$$$$$',config.outputPath)
-      var stats = fs.statSync(config.outputPath)
-      console.log('****************###########',stats)
       callback()
     })
 
