@@ -18,6 +18,8 @@ function extract(source, callback) {
     })
     .on('end', function() {
       console.log('OUTPUT PATH$$$$$$$$',config.outputPath)
+      var stats = fs.statSync(config.outputPath)
+      console.log('****************###########',stats.size/(1024*1024))
       callback()
     })
 
@@ -42,8 +44,6 @@ const verifyFile = function(file, callback) {
 }
 
 const unpackFile = function(file) {
-  var stats = fs.statSync(file)
-  console.log('****************###########',file.size/(1024*1024))
   extract(file, function(error) {
     if (error) {
       console.log('Unable to extract archive, aborting...', error)
