@@ -41,6 +41,7 @@ const verifyFile = function(file, callback) {
 }
 
 const unpackFile = function(file) {
+  console.log('****************###########',file)
   extract(file, function(error) {
     if (error) {
       console.log('Unable to extract archive, aborting...', error)
