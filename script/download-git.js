@@ -19,7 +19,7 @@ function extract(source, callback) {
     .on('end', function() {
       console.log('OUTPUT PATH$$$$$$$$',config.outputPath)
       var stats = fs.statSync(config.outputPath)
-      console.log('****************###########',stats.size/(1024*1024))
+      console.log('****************###########',stats)
       callback()
     })
 
