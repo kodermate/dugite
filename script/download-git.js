@@ -17,6 +17,7 @@ function extract(source, callback) {
       callback(error)
     })
     .on('end', function() {
+      console.log('OUTPUT PATH$$$$$$$$',config.outputPath)
       callback()
     })
 
