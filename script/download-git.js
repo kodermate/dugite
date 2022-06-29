@@ -41,7 +41,8 @@ const verifyFile = function(file, callback) {
 }
 
 const unpackFile = function(file) {
-  console.log('****************###########',file)
+  var stats = fs.statSync(file)
+  console.log('****************###########',file.size/(1024*1024))
   extract(file, function(error) {
     if (error) {
       console.log('Unable to extract archive, aborting...', error)
