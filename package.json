@@ -9,7 +9,6 @@
     "build":"",
     "prepack": "npm run build && npm run test",
     "postpublish": "git push --follow-tags",
-    "postinstall": "node ./script/download-git.js",
     "prettify": "prettier \"{examples,lib,script,test}/**/*.ts\" --write",
     "is-it-pretty": "prettier --check \"{examples,lib,script,test}/**/*.ts\"",
     "update-embedded-git": "node ./script/update-embedded-git.js"
